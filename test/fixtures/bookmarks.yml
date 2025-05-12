@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  comment: MyString
-  recipe_id: one
-  category_id: one
+  comment: MyText
+  recipe: one
+  category: one
 
 two:
-  comment: MyString
-  recipe_id: two
-  category_id: two
+  comment: MyText
+  recipe: two
+  category: two
