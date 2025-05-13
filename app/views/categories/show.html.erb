@@ -7,6 +7,7 @@
 <body>
  <h1>Recipes for <%= @category.name%></h1>
  <ul>
+  <%= link_to "Create a bookmark", "#{@category.id}/bookmarks/new"%>
  <%@category.bookmarks.each do |bookmark|%>
  <li>
   <%=bookmark.recipe.name%>
@@ -18,7 +19,7 @@
   </li>
 
  <%end%>
-  <%= link_to "Go back", %>%
+  <%= link_to "Go back", "/categories"%>
   </li>
 
  <ul>

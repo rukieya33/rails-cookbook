@@ -6,6 +6,7 @@
 </head>
 <body>
   <h1>Cook Book</h1>
+  <%= link_to "create a category", "categories/new" %>
   <ul>
     <% @categories.each do |element| %>
       <li> <%= link_to element.name, "categories/#{element.id}" %></li>
