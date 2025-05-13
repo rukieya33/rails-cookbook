@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>title</title>
+</head>
+<body>
+ <h1>Recipes for <%= @category.name%></h1>
+ <ul>
+ <%@category.bookmarks.each do |bookmark|%>
+ <li>
+  <%=bookmark.recipe.name%>
+  <%=bookmark.recipe.description%>
+  <%=bookmark.recipe.rating%>
+  <%=bookmark.comment%>
+  <%= link_to "Delete", bookmark_path(bookmark),
+     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  </li>
+
+ <%end%>
+  <%= link_to "Go back", %>%
+  </li>
+
+ <ul>
+</body>
+</html>

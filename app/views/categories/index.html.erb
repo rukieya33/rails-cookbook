@@ -5,8 +5,11 @@
   <title>title</title>
 </head>
 <body>
+  <h1>Cook Book</h1>
+  <ul>
     <% @categories.each do |element| %>
-      <h1><%= element%></h1>
+      <li> <%= link_to element.name, "categories/#{element.id}" %></li>
     <%end%>
+  </ul>
 </body>
 </html>
