@@ -14,6 +14,7 @@ class BookmarksController < ApplicationController
     @category = Category.find(params[:category_id])
     @bookmark = Bookmark.create(bookmark_params)
     @bookmark.category = @category
+
     if @bookmark.save
       redirect_to category_path(@category)
     else

@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>title</title>
-</head>
-<body>
+<div class="banner" style="background-image:url('<%= image_path "banner.jpg" %>')">
   <h1>Cook Book</h1>
-  <%= link_to "create a category", "categories/new" %>
-  <ul>
-    <% @categories.each do |element| %>
-      <li> <%= link_to element.name, "categories/#{element.id}" %></li>
-    <%end%>
-  </ul>
-</body>
-</html>
+  <h3>Be your best chef :)</h3>
+</div>
+<div class= "container">
+  <div class="categories">
+    <h1>List of Categories</h1>
+    <%= link_to "Add New Category", "categories/new" %>
+  </div>
+
+  <div class="card-list">
+    <% @categories.each do |category| %>
+      <%= link_to category_path(category) do %>
+        <div class="card" style="background-image:url('<%= image_path "banner.jpg" %>')">
+          <div>
+            <h2><%= category.name %></h2>
+            <p><%= category.bookmarks.count %> recipes</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
